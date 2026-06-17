@@ -1,15 +1,18 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import Input from "../Forms/Input";
 import Button from "../Forms/Button";
+import useForm from "../../Hooks/useForm";
 
 const LoginForm = () => {
-  const [username, setUsername] = useState("cat");
-  const [password, setPassword] = useState("cat");
+  const username = useForm();
+  const password = useForm();
 
   // Precisa ser transformada em uma async function.
   function handleSubmit(event) {
-    event.preventDefaut();
+    event.preventDefault();
+
+    if(!username.validate() && !password.validate()) return;
+
     fetch("https://dogsapi.origamid.dev/json/jwt-auth/v1/token", {
       method: "POST",
       headers: {
@@ -30,8 +33,8 @@ const LoginForm = () => {
     <section>
       <h1>Login</h1>
       <form action="" onSubmit={handleSubmit}>
-        <Input label="Usuário" type="text" name="username" />
-        <Input label="Senha" type="text" name="password" />
+        <Input label="Usuário" type="text" name="username" {...username}/>
+        <Input label="Senha" type="text" name="password" {...password}/>
         <Button>Entrar</Button>
       </form>
       <Link to="/login/criar">Criar Conta</Link>
