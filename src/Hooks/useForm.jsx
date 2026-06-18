@@ -5,6 +5,10 @@ const validationTypes = {
     regex: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
     message: "Preencha um email válido",
   },
+  password: {
+    regex: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/,
+    message: "A senha precisa ter 1 letra maiúscula, 1 letra minúscula, 1 número e no mínimo 8 caracteres.",
+  }
 };
 
 const useForm = (type) => {

@@ -1,4 +1,5 @@
 import styles from "./Input.module.css";
+import Error from "../Errors/Error";
 
 const Input = ({ label, type, name, value, error, onChange, onBlur }) => {
   return (
@@ -15,7 +16,8 @@ const Input = ({ label, type, name, value, error, onChange, onBlur }) => {
         onChange={onChange}
         onBlur={onBlur}
       />
-      {error && <p className={styles.error}>{error}</p>}
+      {/* {error && <p className={styles.error}>{error}</p>} */}
+      <Error error={error} />
     </div>
   );
 };
