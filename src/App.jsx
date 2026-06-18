@@ -3,8 +3,10 @@ import Home from "./Components/Home";
 import Login from "./Components/Login/Login";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
+import User from "./Components/User/User";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { UserStorage } from "./Contexts/UserContext";
+import ProtectedRoute from "./Components/Helpers/ProtectedRoute";
 
 function App() {
   return (
@@ -15,6 +17,14 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login/*" element={<Login />} />
+            <Route
+              path="/conta/*"
+              element={
+                <ProtectedRoute>
+                  <User />
+                </ProtectedRoute>
+              }
+            />
           </Routes>
           <Footer />
         </UserStorage>
