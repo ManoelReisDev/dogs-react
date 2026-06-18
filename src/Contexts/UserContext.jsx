@@ -27,9 +27,10 @@ export const UserStorage = ({ children }) => {
       const { url, options } = getTokenRequest({ username, password });
       const tokenResponse = await fetch(url, options);
       if (!tokenResponse.ok)
-        throw new Error(`Error: ${tokenResponse.statusText}`);
+        throw new Error(`Error: Usuário inválido`);
       const { token } = await tokenResponse.json();
       window.localStorage.setItem("token", token);
+
       // Busca do usuário
       await getUser(token);
       navigate("/conta");
