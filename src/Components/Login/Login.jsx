@@ -5,6 +5,7 @@ import LoginRecoveryForm from "./LoginRecoveryForm.jsx";
 import LoginResetForm from "./LoginResetForm.jsx";
 import { useContext } from "react";
 import { UserContext } from "../../Contexts/UserContext";
+import styles from "./Login.module.css";
 
 const login = () => {
   const { login } = useContext(UserContext);
@@ -14,14 +15,16 @@ const login = () => {
   }
 
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<LoginForm />} />
-        <Route path="criar" element={<LoginCreateForm />} />
-        <Route path="perdeu" element={<LoginRecoveryForm />} />
-        <Route path="resetar" element={<LoginResetForm />} />
-      </Routes>
-    </div>
+    <section className={styles.login}>
+      <div className={styles.forms}>
+        <Routes>
+          <Route path="/" element={<LoginForm />} />
+          <Route path="criar" element={<LoginCreateForm />} />
+          <Route path="perdeu" element={<LoginRecoveryForm />} />
+          <Route path="resetar" element={<LoginResetForm />} />
+        </Routes>
+      </div>
+    </section>
   );
 };
 
