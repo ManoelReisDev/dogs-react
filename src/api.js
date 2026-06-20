@@ -72,3 +72,13 @@ export function getPhotos({page, total, user}) {
     },
   };
 }
+
+export function getPhoto(id) {
+  return {
+    url: `${API_URL}/api/photo/${id}`,
+    options: {
+      method: "GET",
+      chace: "no-store",
+    },
+  };
+}
