@@ -17,6 +17,10 @@
     transition: 0.2s
 }
 
+.textarea::placeholder {
+    padding: 6px 8px;
+}
+
 .textarea:focus,
 .textarea:hover {
     outline: none;
