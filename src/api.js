@@ -82,3 +82,18 @@ export function getPhoto(id) {
     },
   };
 }
+
+export function commentPost(id, body) {
+  return {
+    url: `${API_URL}/api/comment/${id}`,
+    options: {
+      method: "POST",
+      chace: "no-store",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+      body: JSON.stringify(body),
+    },
+  };
+}
