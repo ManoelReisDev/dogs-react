@@ -110,3 +110,31 @@ export function photoDeletePost(id) {
     },
   };
 }
+
+export function passwordLostPost(body) {
+  return {
+    url: `${API_URL}/api/password/lost`,
+    options: {
+      method: "POST",
+      chace: "no-store",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    },
+  };
+}
+
+export function passwordResetPost(body) {
+  return {
+    url: `${API_URL}/api/password/reset`,
+    options: {
+      method: "POST",
+      chace: "no-store",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    },
+  };
+} 
