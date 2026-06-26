@@ -10,14 +10,8 @@
 ---
 
 ## 📸 Preview do Projeto
+<img width="838" height="926" alt="Captura de ecrã de 2026-06-26 01-01-29" src="https://github.com/user-attachments/assets/038a1da8-2d8f-48a5-8a27-f68d0c8004dc" />
 
-> Adicione aqui um GIF ou imagem do projeto em execução.
-
-```md
-![Preview do Dogs](./docs/preview.gif)
-```
-
----
 
 ## 🛠 Tecnologias Utilizadas
 
