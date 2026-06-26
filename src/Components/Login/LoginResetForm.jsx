@@ -5,14 +5,16 @@ import useForm from "../../Hooks/useForm";
 import useFetch from "../../Hooks/useFetch";
 import { useNavigate } from "react-router-dom";
 import { passwordResetPost } from "../../api";
+import Error from "../Errors/Error";
+import Head from "../Helpers/Head";
+
 
 const LoginResetForm = () => {
   const [login, setLogin] = useState("");
   const [key, setKey] = useState("");
   const password = useForm("password");
-  const { error, loading, request} = useFetch();
+  const { error, loading, request } = useFetch();
   const navigate = useNavigate();
-
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -37,6 +39,10 @@ const LoginResetForm = () => {
 
   return (
     <div>
+      <Head
+        title="Resetar Senha"
+        description="Página de reset de senha do site Dogs. Redefina sua senha com segurança."
+      />
       <form onSubmit={handleSubmit}>
         <h1 className="title">Resetar Senha</h1>
         <Input

@@ -6,6 +6,7 @@ import { useContext } from "react";
 import { UserContext } from "../../Contexts/UserContext";
 import useFetch from "../../Hooks/useFetch";
 import Error from "../Errors/Error";
+import Head from "../Helpers/Head";
 
 const LoginCreateForm = () => {
   const username = useForm();
@@ -22,12 +23,15 @@ const LoginCreateForm = () => {
       email: email.value,
     });
     const { response } = await request(url, options);
-    if(response.ok) userLogin(username.value, password.value);
-
+    if (response.ok) userLogin(username.value, password.value);
   }
 
   return (
     <section className="animeLeft">
+      <Head
+        title="Cadastro"
+        description="Página de cadastro do site Dogs. Cadastre-se para acessar o site."
+      />
       <h1 className="title">Cadastro</h1>
       <form onSubmit={handleSubmit}>
         <Input type="text" label="Usuário" placeholder="Nome" {...username} />

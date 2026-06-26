@@ -1,12 +1,17 @@
-import styles from './Home.module.css'
-import Feed from './Feed/Feed';
+import styles from "./Home.module.css";
+import Feed from "./Feed/Feed";
+import Head from "./Helpers/Head";
 
 const Home = () => {
   return (
     <section className={`container mainContainer`}>
-      <Feed/>
+      <Head
+        title="Fotos"
+        description="Home do site Dogs, com o feed de fotos."
+      />
+      <Feed />
     </section>
-  )
-}
+  );
+};
 
 export default Home;

@@ -4,6 +4,7 @@ import LoginCreateForm from "./LoginCreateForm.jsx";
 import LoginRecoveryForm from "./LoginRecoveryForm.jsx";
 import LoginResetForm from "./LoginResetForm.jsx";
 import NotFound from "../Errors/NotFound.jsx";
+import Head from "../Helpers/Head.jsx";
 import { useContext } from "react";
 import { UserContext } from "../../Contexts/UserContext";
 import styles from "./Login.module.css";
@@ -18,6 +19,10 @@ const login = () => {
   return (
     <section className={styles.login}>
       <div className={styles.forms}>
+        <Head
+          title="Login"
+          description="Página de login do site Dogs. Entre com seu usuário e senha."
+        />
         <Routes>
           <Route path="/" element={<LoginForm />} />
           <Route path="criar" element={<LoginCreateForm />} />

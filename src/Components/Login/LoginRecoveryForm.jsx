@@ -4,6 +4,7 @@ import useForm from "../../Hooks/useForm";
 import useFetch from "../../Hooks/useFetch";
 import { passwordLostPost } from "../../api";
 import Error from "../Errors/Error";
+import Head from "../Helpers/Head";
 
 const LoginRecoveryForm = () => {
   const login = useForm();
@@ -22,6 +23,10 @@ const LoginRecoveryForm = () => {
 
   return (
     <section>
+      <Head
+        title="Recuperar Senha"
+        description="Página de recuperação de senha do site Dogs. Esqueceu a senha? Envie um email para recuperar sua senha."
+      />
       <h1 className="title">Recuperar Senha</h1>
       <form onSubmit={handleSubmit}>
         <Input label="Email / Usuário" type="text" name="email" {...login} />
@@ -32,7 +37,9 @@ const LoginRecoveryForm = () => {
         )}
         {error && <Error error={error} />}
         {data && (
-          <p style={{ color: "#4c1", marginTop: '1rem' }}>Email enviado com sucesso!</p>
+          <p style={{ color: "#4c1", marginTop: "1rem" }}>
+            Email enviado com sucesso!
+          </p>
         )}
       </form>
     </section>
