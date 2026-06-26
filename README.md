@@ -136,19 +136,15 @@ npm run preview
 
 ## 🌍 Variáveis de Ambiente
 
-Atualmente, este projeto não utiliza variáveis de ambiente.
+O projeto lê a base da API pela variável de ambiente `VITE_API_URL`.
 
-A API está configurada diretamente em:
-
-```js
-https://dogsapi.origamid.dev/json
-```
-
-Se futuramente quiser flexibilizar isso, você pode adicionar algo como:
+Para desenvolvimento local, você pode usar um arquivo `.env` ou `.env.local` com:
 
 ```env
 VITE_API_URL=https://dogsapi.origamid.dev/json
 ```
+
+Na Vercel, configure a mesma variável em **Project Settings > Environment Variables** e faça um novo deploy para a mudança entrar em vigor.
 
 ---
 
@@ -158,7 +154,7 @@ Possíveis evoluções para o projeto:
 
 - [ ] Adicionar testes automatizados com Vitest e React Testing Library.
 - [ ] Implementar testes end-to-end com Playwright.
-- [ ] Migrar a URL da API para variável de ambiente.
+- [x] Migrar a URL da API para variável de ambiente.
 - [ ] Melhorar a experiência de carregamento com skeletons.
 - [ ] Incluir mensagens toast para feedback de ações.
 - [ ] Adicionar acessibilidade refinada para formulários e modais.
