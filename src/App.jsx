@@ -5,9 +5,11 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import User from "./Components/User/User";
 import Photo from "./Components/Photo/Photo";
+import NotFound from "./Components/Errors/NotFound";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { UserStorage } from "./Contexts/UserContext";
 import ProtectedRoute from "./Components/Helpers/ProtectedRoute";
+import UserProfile from "./Components/User/UserProfile";
 
 function App() {
   return (
@@ -27,7 +29,8 @@ function App() {
               }
             />
             <Route path="foto/:id" element={<Photo />} />
-            <Route path="*" element={<Home />} />
+            <Route path="perfil/:user" element={<UserProfile/>} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
         </UserStorage>
