@@ -138,3 +138,16 @@ export function passwordResetPost(body) {
     },
   };
 } 
+
+export function userGetStats() {
+  return {
+    url: `${API_URL}/api/stats`,
+    options: {
+      method: "GET",
+      chace: "no-store",
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    },
+  };
+}
