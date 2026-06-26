@@ -1,0 +1,42 @@
+.wrapper {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    z-index: 1000;
+}
+
+.loader {
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.icon {
+    display: block;
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: halfSpin 2.4s ease-in-out infinite;
+}
+
+@keyframes halfSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .icon {
+        animation: none;
+    }
+}
