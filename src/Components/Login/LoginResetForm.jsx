@@ -38,7 +38,7 @@ const LoginResetForm = () => {
   }, []);
 
   return (
-    <div>
+    <section>
       <Head
         title="Resetar Senha"
         description="Página de reset de senha do site Dogs. Redefina sua senha com segurança."
@@ -58,7 +58,7 @@ const LoginResetForm = () => {
         )}
       </form>
       {error && <Error error={error} />}
-    </div>
+    </section>
   );
 };
 
