@@ -38,7 +38,7 @@ const LoginResetForm = () => {
   }, []);
 
   return (
-    <section>
+    <section className="animeLeft">
       <Head
         title="Resetar Senha"
         description="Página de reset de senha do site Dogs. Redefina sua senha com segurança."
