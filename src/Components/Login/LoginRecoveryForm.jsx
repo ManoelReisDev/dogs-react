@@ -22,7 +22,7 @@ const LoginRecoveryForm = () => {
   }
 
   return (
-    <section>
+    <section className="animeLeft">
       <Head
         title="Recuperar Senha"
         description="Página de recuperação de senha do site Dogs. Esqueceu a senha? Envie um email para recuperar sua senha."
