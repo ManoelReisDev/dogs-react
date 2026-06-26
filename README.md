@@ -143,9 +143,6 @@ Para desenvolvimento local, você pode usar um arquivo `.env` ou `.env.local` co
 ```env
 VITE_API_URL=https://dogsapi.origamid.dev/json
 ```
-
-Na Vercel, configure a mesma variável em **Project Settings > Environment Variables** e faça um novo deploy para a mudança entrar em vigor.
-
 ---
 
 ## 🧭 Próximos Passos
@@ -167,7 +164,7 @@ Este projeto está sob a licença MIT.
 
 **Agradecimentos:** projeto desenvolvido com apoio do conteúdo e da metodologia do [Origamid](https://www.origamid.com/), que serviu como base de aprendizado e referência técnica.
 
-**Autor:** ManoelDev-ifma  
+**Autor:** ManoelReisDev  
 **GitHub:** [ManoelReisDev](https://github.com/ManoelReisDev)  
 **Repositório:** [dogs-react](https://github.com/ManoelReisDev/dogs-react)
 
